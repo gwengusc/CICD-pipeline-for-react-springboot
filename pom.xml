@@ -1,0 +1,12 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.practicetest</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>parent</name>
+    <modules>
+        <module>grpc-api</module>
+        <module>server</module>
+    </modules>
+</project>

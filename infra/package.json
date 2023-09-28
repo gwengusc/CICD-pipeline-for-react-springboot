@@ -1,0 +1,60 @@
+{
+  "name": "code_pipeline",
+  "version": "0.1.0",
+  "bin": {
+    "code_pipeline": "bin/code_pipeline.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest --passWithNoTests",
+    "cdk": "cdk",
+    "eslint-check": "eslint .. --ext .ts --max-warnings 0",
+    "eslint-fix": "eslint .. --ext .ts --max-warnings 0 --fix"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "@types/node": "18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "aws-cdk": "2.30.0",
+    "eslint": "^8.43.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-with-typescript": "^35.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^26.4.2",
+    "jest-junit": "^14.0.0",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.30.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputName": "test-report.xml"
+        }
+      ]
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}
